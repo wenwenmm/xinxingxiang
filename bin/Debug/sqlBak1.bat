@@ -1,0 +1,2 @@
+set "Ymd=%date:~,4%%date:~5,2%%date:~8,2%%time:~0,2%%time:~3,2%%time:~6,2%" 
+"D:\Program Files\MySQL\MySQL Server 5.5\bin\mysqldump" --opt -Q -uroot -proot --default-character-set=gbk xinxingxiang > "E:\net\xinxingxiang\bin\Debug\DBBak\%Ymd%自动备份.sql" 
