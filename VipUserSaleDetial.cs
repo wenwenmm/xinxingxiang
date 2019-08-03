@@ -205,5 +205,15 @@ namespace xinxingxiang
             bindVipSaleData(vipId, this.txtTicketNo.Text);
         }
         #endregion
+
+        private void BtnAddSale2_Click(object sender, EventArgs e)
+        {
+            SaleAddNew form = new SaleAddNew(vipId);
+            form.ShowDialog();
+            if (form.DialogResult == DialogResult.Cancel)
+            {
+                bindVipSaleData(vipId, "");
+            }
+        }
     }
 }

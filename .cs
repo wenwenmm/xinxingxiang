@@ -16,12 +16,15 @@ namespace xinxingxiang
         private string vipName = "";//会员名
         private string printVipNameStr = "";//会员名-打印用
         private string vipNo = "";//会员编号
+        private Button btn = new Button();
 
         public SaleAdd(string id)
         {
             InitializeComponent();
             if (!string.IsNullOrEmpty(id))
             {
+                this.dataGridView1.DataSource = null;
+                this.dataGridView1.DataMember = null;
                 vipId = id;
                 string sql = string.Format("SELECT * FROM VIP_USER WHERE ID='{0}'", id);
                 DataSet ds = DbHelperMySQL.Query(sql);
@@ -268,7 +271,38 @@ namespace xinxingxiang
                 txtMoney.Text = "0";
                 txtDiscMoney.Text = "0";
             }
+            int index = this.dataGridView1.Rows.Count-1;
+            this.dataGridView1.Rows[index].Cells[0].Value = "1";
+            this.dataGridView1.Rows[index].Cells[1].Value = "11";
+            this.dataGridView1.Rows[index].Cells[2].Value = "1111";
+
+            DataGridViewButtonColumn buttonsPrint = new DataGridViewButtonColumn();
+            {
+                buttonsPrint.HeaderText = "删除";
+                buttonsPrint.Text = "删除";
+                buttonsPrint.Name = "delete";
+                buttonsPrint.UseColumnTextForButtonValue = true;
+                buttonsPrint.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                buttonsPrint.FlatStyle = FlatStyle.Popup;
+                buttonsPrint.CellTemplate.Style.BackColor = Color.Honeydew;
+                buttonsPrint.DisplayIndex = 5;
+            }
+            dataGridView1.Columns.Add(buttonsPrint);
+
+            //btn.Visible = false;
+            //btn.Text = "删除";
+            //btn.Click += this.button_Click;
+            //this.listView1.Controls.Add(btn);
+            //this.btn.Size = new Size(this.listView1.Items[0].SubItems[3].Bounds.Width,
+            //this.listView1.Items[0].SubItems[3].Bounds.Height);
+
         }
+
+        private void button_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
         private void Button1_Click(object sender, EventArgs e)
         {
@@ -295,7 +329,7 @@ namespace xinxingxiang
             sqlBui.Append(@"INSERT INTO VIP_SALE(ID,SALE_PROJECT,SALE_MONEY,THIS_BLANCE_MONEY,VIP_POINT
                                                     ,SALE_DATE,VIP_ID,VIP_SALE_NAME,REMARK,ADD_USER_ID,ADD_USER_NAME,ADD_TIME,VIP_NO,TICKET_NO,VIP_DISC_RATE,DISC_MONEY,SALE_MONEY_LIST)");
             sqlBui.AppendFormat(@"VALUES ('{0}','{1}',{2},{3},{4},'{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}',{14},{15},{16});",
-                Guid.NewGuid().ToString("N"), txtRemark.Text == "" ? "套餐" : txtRemark.Text, Convert.ToDouble(txtMoney.Text), newBlanceMoney, 0, addTime, vipId, vipName, txtRemark.Text
+                Guid.NewGuid().ToString("N"), "套餐", Convert.ToDouble(txtMoney.Text), newBlanceMoney, 0, addTime, vipId, vipName, txtRemark.Text
                 , Program.userId, Program.userName, addTime, vipNo, ticketNo
                 , txtDisc.Text, txtDiscMoney.Text, discSaleMoney);
 
@@ -303,7 +337,7 @@ namespace xinxingxiang
             int result = DbHelperMySQL.ExecuteSqlTran(sqlList);
             if (result > 0)
             {
-                string[] chkProjectList = { txtRemark.Text == "" ? "套餐" : txtRemark.Text };//項目
+                string[] chkProjectList = { "套餐" };//項目
                 List<double> moneyList = new List<double>();//单价
                 moneyList.Add(saleMoney);
                 printTicket2(chkProjectList, moneyList, vipNo, printVipNameStr, Convert.ToDouble(txtMoney.Text), newBlanceMoney, ticketNo, txtRemark.Text, txtDisc.Text, txtDiscMoney.Text);

@@ -118,6 +118,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnCancel.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAEAAAAgBAMAAAAhyw8pAAAABGdBTUEAALGPC/xhBQAAAB5QTFRFxOb/
+        5vb/1+7/9vn9zun/////0Ov/7/b/+P3/3vH/JB3ETAAAAAlwSFlzAAALEAAACxABrSO9dQAAACB0RVh0
+        U29mdHdhcmUATWFjcm9tZWRpYSBGaXJld29ya3MgTVi7kSokAAAAJUlEQVQY02MIYGgA4wYGAyAsAEIB
+        MJwAhQoMCUiQgcEBGTMwAABWXwkxJ91bwgAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="btnSale.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAAEAAAAgBAMAAAAhyw8pAAAABGdBTUEAALGPC/xhBQAAAB5QTFRFxOb/
@@ -126,7 +134,7 @@
         MJwAhQoMCUiQgcEBGTMwAABWXwkxJ91bwgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="btnAddMoney.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="button1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAAEAAAAgBAMAAAAhyw8pAAAABGdBTUEAALGPC/xhBQAAAB5QTFRFxOb/
         5vb/1+7/9vn9zun/////0Ov/7/b/+P3/3vH/JB3ETAAAAAlwSFlzAAALEAAACxABrSO9dQAAACB0RVh0
@@ -134,25 +142,6 @@
         MJwAhQoMCUiQgcEBGTMwAABWXwkxJ91bwgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="btnSearch.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAEAAAAgBAMAAAAhyw8pAAAABGdBTUEAALGPC/xhBQAAAB5QTFRFxOb/
-        5vb/1+7/9vn9zun/////0Ov/7/b/+P3/3vH/JB3ETAAAAAlwSFlzAAALEAAACxABrSO9dQAAACB0RVh0
-        U29mdHdhcmUATWFjcm9tZWRpYSBGaXJld29ya3MgTVi7kSokAAAAJUlEQVQY02MIYGgA4wYGAyAsAEIB
-        MJwAhQoMCUiQgcEBGTMwAABWXwkxJ91bwgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="btnAddSale2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAEAAAAgBAMAAAAhyw8pAAAABGdBTUEAALGPC/xhBQAAAB5QTFRFxOb/
-        5vb/1+7/9vn9zun/////0Ov/7/b/+P3/3vH/JB3ETAAAAAlwSFlzAAALEAAACxABrSO9dQAAACB0RVh0
-        U29mdHdhcmUATWFjcm9tZWRpYSBGaXJld29ya3MgTVi7kSokAAAAJUlEQVQY02MIYGgA4wYGAyAsAEIB
-        MJwAhQoMCUiQgcEBGTMwAABWXwkxJ91bwgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAgIAAAAEAIAAoCAEAFgAAACgAAACAAAAAAAEAAAEAIAAAAAAAAAABABILAAASCwAAAAAAAAAA

@@ -39,6 +39,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtTicketNo = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.btnAddSale2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgSaleList)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,7 +64,7 @@
             this.btnSale.Name = "btnSale";
             this.btnSale.Size = new System.Drawing.Size(91, 23);
             this.btnSale.TabIndex = 2;
-            this.btnSale.Text = "添加消费记录";
+            this.btnSale.Text = "添加消费记录1";
             this.btnSale.UseVisualStyleBackColor = true;
             this.btnSale.Click += new System.EventHandler(this.btnSale_Click);
             // 
@@ -79,7 +80,7 @@
             // btnAddMoney
             // 
             this.btnAddMoney.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddMoney.BackgroundImage")));
-            this.btnAddMoney.Location = new System.Drawing.Point(501, 9);
+            this.btnAddMoney.Location = new System.Drawing.Point(597, 9);
             this.btnAddMoney.Name = "btnAddMoney";
             this.btnAddMoney.Size = new System.Drawing.Size(91, 23);
             this.btnAddMoney.TabIndex = 4;
@@ -117,7 +118,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(640, 14);
+            this.label3.Location = new System.Drawing.Point(736, 14);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 12);
             this.label3.TabIndex = 7;
@@ -125,7 +126,7 @@
             // 
             // txtTicketNo
             // 
-            this.txtTicketNo.Location = new System.Drawing.Point(712, 11);
+            this.txtTicketNo.Location = new System.Drawing.Point(808, 11);
             this.txtTicketNo.Name = "txtTicketNo";
             this.txtTicketNo.Size = new System.Drawing.Size(117, 21);
             this.txtTicketNo.TabIndex = 8;
@@ -133,7 +134,7 @@
             // btnSearch
             // 
             this.btnSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearch.BackgroundImage")));
-            this.btnSearch.Location = new System.Drawing.Point(861, 10);
+            this.btnSearch.Location = new System.Drawing.Point(957, 10);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 9;
@@ -141,12 +142,24 @@
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
+            // btnAddSale2
+            // 
+            this.btnAddSale2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddSale2.BackgroundImage")));
+            this.btnAddSale2.Location = new System.Drawing.Point(491, 9);
+            this.btnAddSale2.Name = "btnAddSale2";
+            this.btnAddSale2.Size = new System.Drawing.Size(91, 23);
+            this.btnAddSale2.TabIndex = 10;
+            this.btnAddSale2.Text = "添加消费记录2";
+            this.btnAddSale2.UseVisualStyleBackColor = true;
+            this.btnAddSale2.Click += new System.EventHandler(this.BtnAddSale2_Click);
+            // 
             // VipUserSaleDetial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1167, 331);
+            this.Controls.Add(this.btnAddSale2);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtTicketNo);
             this.Controls.Add(this.label3);
@@ -181,5 +194,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtTicketNo;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button btnAddSale2;
     }
 }

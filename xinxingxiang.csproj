@@ -109,6 +109,12 @@
     <Compile Include="SaleAdd.Designer.cs">
       <DependentUpon>SaleAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="SaleAddNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaleAddNew.Designer.cs">
+      <DependentUpon>SaleAddNew.cs</DependentUpon>
+    </Compile>
     <Compile Include="UsbPrinter.cs" />
     <Compile Include="VipUserAdd.cs">
       <SubType>Form</SubType>
@@ -141,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SaleAdd.resx">
       <DependentUpon>SaleAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaleAddNew.resx">
+      <DependentUpon>SaleAddNew.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VipUserAdd.resx">
       <DependentUpon>VipUserAdd.cs</DependentUpon>
