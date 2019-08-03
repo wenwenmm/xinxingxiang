@@ -151,7 +151,7 @@ namespace xinxingxiang
                 }
                 sqlBui.Append(@"INSERT INTO VIP_SALE(ID,SALE_PROJECT,SALE_MONEY,THIS_BLANCE_MONEY,VIP_POINT
                                                     ,SALE_DATE,VIP_ID,VIP_SALE_NAME,REMARK,ADD_USER_ID,ADD_USER_NAME,ADD_TIME,VIP_NO,TICKET_NO,VIP_DISC_RATE,DISC_MONEY,SALE_MONEY_LIST)");
-                sqlBui.AppendFormat(@"VALUES ('{0}','{1}',{2},{3},{4},'{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}',{14},{15},{16});",
+                sqlBui.AppendFormat(@"VALUES ('{0}','{1}',{2},{3},{4},'{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}',{14},{15},'{16}');",
                     Guid.NewGuid().ToString("N"), string.Join("+", chkProjectList), Convert.ToDouble(txtMoney.Text), newBlanceMoney, 0, addTime, vipId, vipName, txtRemark.Text
                     , Program.userId, Program.userName, addTime, vipNo, ticketNo
                     , txtDisc.Text, txtDiscMoney.Text, string.Join("+", moneyList));
@@ -259,7 +259,16 @@ namespace xinxingxiang
                     saleMoney += Convert.ToDouble(strTmps[1]);
                 }
                 txtMoney.Text = saleMoney.ToString();
-                double disc = Convert.ToDouble(txtDisc.Text);
+
+                double disc = 10D;
+                if (txtDisc.Text == "" || txtDisc.Text == "0")
+                {
+                    disc = 10;
+                }
+                else
+                {
+                    disc = Convert.ToDouble(txtDisc.Text);
+                }
                 txtDiscMoney.Text = (saleMoney * disc / 10).ToString();
                 btnSale.Enabled = true;
             }
@@ -273,7 +282,15 @@ namespace xinxingxiang
         private void Button1_Click(object sender, EventArgs e)
         {
             double saleMoney = Convert.ToDouble(txtMoney.Text);
-            double disc = Convert.ToDouble(txtDisc.Text);
+            double disc = 10D;
+            if (txtDisc.Text == "" || txtDisc.Text == "0")
+            {
+                disc = 10;
+            }
+            else
+            {
+                disc = Convert.ToDouble(txtDisc.Text);
+            }
             double discSaleMoney = (saleMoney * disc / 10);
             txtDiscMoney.Text = discSaleMoney.ToString();
             Random r = new Random();
@@ -294,7 +311,7 @@ namespace xinxingxiang
             }
             sqlBui.Append(@"INSERT INTO VIP_SALE(ID,SALE_PROJECT,SALE_MONEY,THIS_BLANCE_MONEY,VIP_POINT
                                                     ,SALE_DATE,VIP_ID,VIP_SALE_NAME,REMARK,ADD_USER_ID,ADD_USER_NAME,ADD_TIME,VIP_NO,TICKET_NO,VIP_DISC_RATE,DISC_MONEY,SALE_MONEY_LIST)");
-            sqlBui.AppendFormat(@"VALUES ('{0}','{1}',{2},{3},{4},'{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}',{14},{15},{16});",
+            sqlBui.AppendFormat(@"VALUES ('{0}','{1}',{2},{3},{4},'{5}','{6}','{7}','{8}','{9}','{10}','{11}','{12}','{13}',{14},{15},'{16}');",
                 Guid.NewGuid().ToString("N"), txtRemark.Text == "" ? "套餐" : txtRemark.Text, Convert.ToDouble(txtMoney.Text), newBlanceMoney, 0, addTime, vipId, vipName, txtRemark.Text
                 , Program.userId, Program.userName, addTime, vipNo, ticketNo
                 , txtDisc.Text, txtDiscMoney.Text, discSaleMoney);

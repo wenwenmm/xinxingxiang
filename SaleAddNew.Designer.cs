@@ -54,6 +54,9 @@
             this.txtMoney = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -80,11 +83,11 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(14, 53);
+            this.dataGridView1.Location = new System.Drawing.Point(14, 80);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(224, 226);
+            this.dataGridView1.Size = new System.Drawing.Size(224, 199);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellDoubleClick);
             // 
@@ -121,7 +124,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(238, 385);
+            this.label12.Location = new System.Drawing.Point(238, 400);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(17, 12);
             this.label12.TabIndex = 40;
@@ -129,7 +132,7 @@
             // 
             // txtDiscMoney
             // 
-            this.txtDiscMoney.Location = new System.Drawing.Point(85, 380);
+            this.txtDiscMoney.Location = new System.Drawing.Point(85, 395);
             this.txtDiscMoney.Name = "txtDiscMoney";
             this.txtDiscMoney.Size = new System.Drawing.Size(153, 21);
             this.txtDiscMoney.TabIndex = 38;
@@ -137,7 +140,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(14, 383);
+            this.label13.Location = new System.Drawing.Point(14, 398);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(65, 12);
             this.label13.TabIndex = 39;
@@ -145,16 +148,16 @@
             // 
             // txtDisc
             // 
-            this.txtDisc.Location = new System.Drawing.Point(85, 351);
+            this.txtDisc.Location = new System.Drawing.Point(85, 366);
             this.txtDisc.Name = "txtDisc";
-            this.txtDisc.ReadOnly = true;
             this.txtDisc.Size = new System.Drawing.Size(153, 21);
             this.txtDisc.TabIndex = 36;
+            this.txtDisc.TextChanged += new System.EventHandler(this.TxtDisc_TextChanged);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(37, 354);
+            this.label11.Location = new System.Drawing.Point(37, 369);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(41, 12);
             this.label11.TabIndex = 37;
@@ -172,7 +175,7 @@
             // 
             // txtSaleName
             // 
-            this.txtSaleName.Location = new System.Drawing.Point(85, 411);
+            this.txtSaleName.Location = new System.Drawing.Point(85, 426);
             this.txtSaleName.Name = "txtSaleName";
             this.txtSaleName.Size = new System.Drawing.Size(153, 21);
             this.txtSaleName.TabIndex = 24;
@@ -180,7 +183,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(14, 411);
+            this.label8.Location = new System.Drawing.Point(14, 426);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(65, 12);
             this.label8.TabIndex = 34;
@@ -198,17 +201,18 @@
             // btnCancel
             // 
             this.btnCancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.BackgroundImage")));
-            this.btnCancel.Location = new System.Drawing.Point(96, 449);
+            this.btnCancel.Location = new System.Drawing.Point(96, 456);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 29;
             this.btnCancel.Text = "取 消";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // btnSale
             // 
             this.btnSale.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSale.BackgroundImage")));
-            this.btnSale.Location = new System.Drawing.Point(17, 449);
+            this.btnSale.Location = new System.Drawing.Point(17, 456);
             this.btnSale.Name = "btnSale";
             this.btnSale.Size = new System.Drawing.Size(75, 23);
             this.btnSale.TabIndex = 27;
@@ -278,7 +282,7 @@
             // button1
             // 
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.Location = new System.Drawing.Point(353, 449);
+            this.button1.Location = new System.Drawing.Point(353, 456);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(121, 23);
             this.button1.TabIndex = 41;
@@ -286,11 +290,42 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
+            // btnSearch
+            // 
+            this.btnSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearch.BackgroundImage")));
+            this.btnSearch.Location = new System.Drawing.Point(162, 51);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.TabIndex = 42;
+            this.btnSearch.Text = "搜索";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(17, 53);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(139, 21);
+            this.txtSearch.TabIndex = 43;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.ForeColor = System.Drawing.Color.Red;
+            this.label14.Location = new System.Drawing.Point(85, 347);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(95, 12);
+            this.label14.TabIndex = 44;
+            this.label14.Text = "注：不打折填0。";
+            // 
             // SaleAddNew
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(504, 484);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txtDiscMoney);
@@ -353,5 +388,8 @@
         private System.Windows.Forms.TextBox txtMoney;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Label label14;
     }
 }

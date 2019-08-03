@@ -142,6 +142,14 @@
         MJwAhQoMCUiQgcEBGTMwAABWXwkxJ91bwgAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="btnSearch.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAEAAAAgBAMAAAAhyw8pAAAABGdBTUEAALGPC/xhBQAAAB5QTFRFxOb/
+        5vb/1+7/9vn9zun/////0Ov/7/b/+P3/3vH/JB3ETAAAAAlwSFlzAAALEAAACxABrSO9dQAAACB0RVh0
+        U29mdHdhcmUATWFjcm9tZWRpYSBGaXJld29ya3MgTVi7kSokAAAAJUlEQVQY02MIYGgA4wYGAyAsAEIB
+        MJwAhQoMCUiQgcEBGTMwAABWXwkxJ91bwgAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAgIAAAAEAIAAoCAEAFgAAACgAAACAAAAAAAEAAAEAIAAAAAAAAAABABILAAASCwAAAAAAAAAA

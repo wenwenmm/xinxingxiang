@@ -59,7 +59,7 @@ namespace xinxingxiang
         /// <param name="vipUserName">会员姓名</param>
         /// <param name="remark">备注信息</param>
         /// <param name="loginUserName">当前登录人</param>
-        public void BeginPrint(string PNPDeviceID, DateTime saleTime, String ticketNo, string[] saleProject, List<Double> moneys, string saleMoney, string blanceMoney, string vipNo, string vipUserName, string remark, string loginUserName,string disc, string discMoney)
+        public void BeginPrint(string PNPDeviceID, DateTime saleTime, String ticketNo, string[] saleProject, List<Double> moneys, string saleMoney, string blanceMoney, string vipNo, string vipUserName, string remark, string loginUserName, string disc, string discMoney)
         {
             //cmd += "\x0002" + "L" + "D11" + "\r\n" + "191108010000025ABCDEF" + "\r\n" + "E\r\n";
             string printStr = "\r\n";
@@ -79,7 +79,14 @@ namespace xinxingxiang
             }
             printStr += "--------------------------------" + "\r\n";
             printStr += "消费金额：￥" + saleMoney + "\r\n";
-            printStr += "折    扣：" + disc + "折\r\n";
+            if (disc != "10")
+            {
+                printStr += "折    扣：" + disc + "折\r\n";
+            }
+            else
+            {
+                printStr += "折    扣：无\r\n";
+            }
             printStr += "折后金额：￥" + discMoney + "\r\n";
             printStr += "会员余额：￥" + blanceMoney + "\r\n";
             printStr += "会员编号：" + vipNo + "\r\n";

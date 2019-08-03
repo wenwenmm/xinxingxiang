@@ -60,11 +60,11 @@
             // btnSale
             // 
             this.btnSale.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSale.BackgroundImage")));
-            this.btnSale.Location = new System.Drawing.Point(390, 9);
+            this.btnSale.Location = new System.Drawing.Point(496, 9);
             this.btnSale.Name = "btnSale";
-            this.btnSale.Size = new System.Drawing.Size(91, 23);
+            this.btnSale.Size = new System.Drawing.Size(118, 23);
             this.btnSale.TabIndex = 2;
-            this.btnSale.Text = "添加消费记录1";
+            this.btnSale.Text = "添加消费记录备用";
             this.btnSale.UseVisualStyleBackColor = true;
             this.btnSale.Click += new System.EventHandler(this.btnSale_Click);
             // 
@@ -80,7 +80,7 @@
             // btnAddMoney
             // 
             this.btnAddMoney.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddMoney.BackgroundImage")));
-            this.btnAddMoney.Location = new System.Drawing.Point(597, 9);
+            this.btnAddMoney.Location = new System.Drawing.Point(631, 9);
             this.btnAddMoney.Name = "btnAddMoney";
             this.btnAddMoney.Size = new System.Drawing.Size(91, 23);
             this.btnAddMoney.TabIndex = 4;
@@ -145,11 +145,11 @@
             // btnAddSale2
             // 
             this.btnAddSale2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddSale2.BackgroundImage")));
-            this.btnAddSale2.Location = new System.Drawing.Point(491, 9);
+            this.btnAddSale2.Location = new System.Drawing.Point(386, 9);
             this.btnAddSale2.Name = "btnAddSale2";
             this.btnAddSale2.Size = new System.Drawing.Size(91, 23);
             this.btnAddSale2.TabIndex = 10;
-            this.btnAddSale2.Text = "添加消费记录2";
+            this.btnAddSale2.Text = "添加消费记录";
             this.btnAddSale2.UseVisualStyleBackColor = true;
             this.btnAddSale2.Click += new System.EventHandler(this.BtnAddSale2_Click);
             // 
