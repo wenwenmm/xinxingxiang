@@ -296,17 +296,6 @@ namespace xinxingxiang
         }
         #endregion
 
-        private void BtnSearch_Click(object sender, EventArgs e)
-        {
-            string sqlStr = String.Format("SELECT PROJECT_JIANCHENG AS 项目 ,UNIT_PRICE AS 单价 FROM PROJECT WHERE IS_DEL=0 AND PROJECT_JIANCHENG LIKE '%{0}%';", txtSearch.Text);
-            DataSet dsPro = DbHelperMySQL.Query(sqlStr);
-            if (dsPro.Tables[0].Rows.Count > 0)
-            {
-                this.dataGridView1.DataSource = dsPro;
-                this.dataGridView1.DataMember = dsPro.Tables[0].TableName;
-            }
-        }
-
         private void BtnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -315,6 +304,87 @@ namespace xinxingxiang
         private void TxtDisc_TextChanged(object sender, EventArgs e)
         {
             calcMoney();
+        }
+
+        private void bindDate(String searchStr)
+        {
+            string sqlStr = String.Format("SELECT PROJECT_JIANCHENG AS 项目 ,UNIT_PRICE AS 单价 FROM PROJECT WHERE IS_DEL=0 AND PROJECT_JIANCHENG LIKE '%{0}%';", searchStr);
+            if (searchStr == "其他")
+            {
+                sqlStr = String.Format("SELECT PROJECT_JIANCHENG AS 项目 ,UNIT_PRICE AS 单价 FROM PROJECT WHERE IS_DEL=0 " +
+                    "AND PROJECT_JIANCHENG NOT LIKE '%洗%'" +
+                    "AND PROJECT_JIANCHENG NOT LIKE '%剪%'" +
+                    "AND PROJECT_JIANCHENG NOT LIKE '%吹%'" +
+                    "AND PROJECT_JIANCHENG NOT LIKE '%烫%'" +
+                    "AND PROJECT_JIANCHENG NOT LIKE '%染%'" +
+                    "AND PROJECT_JIANCHENG NOT LIKE '%护%'" +
+                    "AND PROJECT_JIANCHENG NOT LIKE '%直%'" +
+                    "AND PROJECT_JIANCHENG NOT LIKE '%造%'" +
+                    "AND PROJECT_JIANCHENG NOT LIKE '%接%'" +
+                    "AND PROJECT_JIANCHENG NOT LIKE '%外%'; ");
+            }
+            
+            DataSet dsPro = DbHelperMySQL.Query(sqlStr);
+            if (dsPro.Tables[0].Rows.Count > 0)
+            {
+                this.dataGridView1.DataSource = dsPro;
+                this.dataGridView1.DataMember = dsPro.Tables[0].TableName;
+            }
+        }
+
+        private void LinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            bindDate(linkLabel1.Text);
+        }
+
+        private void LinkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            bindDate(linkLabel2.Text);
+        }
+
+        private void LinkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            bindDate(linkLabel3.Text);
+        }
+
+        private void LinkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            bindDate(linkLabel4.Text);
+        }
+
+        private void LinkLabel8_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            bindDate(linkLabel8.Text);
+        }
+
+        private void LinkLabel5_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            bindDate(linkLabel5.Text);
+        }
+
+        private void LinkLabel9_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            bindDate(linkLabel9.Text);
+        }
+
+        private void LinkLabel6_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            bindDate(linkLabel6.Text);
+        }
+
+        private void LinkLabel7_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            bindDate(linkLabel7.Text);
+        }
+
+        private void LinkLabel10_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            bindDate(linkLabel10.Text);
+        }
+
+        private void LinkLabel11_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            bindDate(linkLabel11.Text);
         }
     }
 }
