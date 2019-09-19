@@ -34,7 +34,7 @@ namespace xinxingxiang
                         radWoMan.Checked = false;
                     }
                     txtDiscRate.Text = ds.Tables[0].Rows[0]["VIP_DISC_RATE"].ToString();
-                    txtDiscRate.ReadOnly = true;
+                    //txtDiscRate.ReadOnly = true;
                     txtAddress.Text = ds.Tables[0].Rows[0]["VIP_ADDRESS"].ToString();
                     txtBlance.Text = ds.Tables[0].Rows[0]["VIP_BLAN_MONEY"].ToString();
                     txtBlance.ReadOnly = true;
@@ -131,9 +131,11 @@ namespace xinxingxiang
             else
             {
                 sqlStr = string.Format(@"UPDATE VIP_USER SET 
-                                         VIP_NAME='{0}',VIP_SEX={1},VIP_PHONE='{2}',VIP_ADDRESS='{3}',VIP_DISC_RATE={4},VIP_BLAN_MONEY={5},REMARK='{6}',EDIT_TIME='{8}'
-                WHERE ID='{7}'", txtVipName.Text, radMan.Checked ? 1 : 0, txtVipPhone.Text, txtAddress.Text, Convert.ToDouble(txtDiscRate.Text), Convert.ToDouble(txtBlance.Text),
-                   txtRemark.Text, lblId.Text, DateTime.Now);
+                                         VIP_NAME='{0}',VIP_SEX={1},VIP_PHONE='{2}',VIP_ADDRESS='{3}',VIP_DISC_RATE={4},VIP_BLAN_MONEY={5},REMARK='{6}',EDIT_TIME='{7}'
+                                        ,VIP_DISC_RATE={8}
+                                         WHERE ID='{9}'",
+                txtVipName.Text, radMan.Checked ? 1 : 0, txtVipPhone.Text, txtAddress.Text, Convert.ToDouble(txtDiscRate.Text), Convert.ToDouble(txtBlance.Text),
+                   txtRemark.Text, DateTime.Now, Convert.ToDouble(txtDiscRate.Text), lblId.Text);
             }
             int result = DbHelperMySQL.ExecuteSql(sqlStr);
             if (result > 0)

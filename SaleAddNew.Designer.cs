@@ -92,7 +92,7 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(14, 80);
+            this.dataGridView1.Location = new System.Drawing.Point(13, 80);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 23;
@@ -312,7 +312,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(13, 65);
+            this.linkLabel1.Location = new System.Drawing.Point(12, 53);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(17, 12);
             this.linkLabel1.TabIndex = 45;
@@ -323,7 +323,7 @@
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(32, 65);
+            this.linkLabel2.Location = new System.Drawing.Point(31, 53);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(17, 12);
             this.linkLabel2.TabIndex = 46;
@@ -334,7 +334,7 @@
             // linkLabel3
             // 
             this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Location = new System.Drawing.Point(51, 65);
+            this.linkLabel3.Location = new System.Drawing.Point(50, 53);
             this.linkLabel3.Name = "linkLabel3";
             this.linkLabel3.Size = new System.Drawing.Size(17, 12);
             this.linkLabel3.TabIndex = 47;
@@ -345,7 +345,7 @@
             // linkLabel4
             // 
             this.linkLabel4.AutoSize = true;
-            this.linkLabel4.Location = new System.Drawing.Point(71, 65);
+            this.linkLabel4.Location = new System.Drawing.Point(70, 53);
             this.linkLabel4.Name = "linkLabel4";
             this.linkLabel4.Size = new System.Drawing.Size(17, 12);
             this.linkLabel4.TabIndex = 48;
@@ -356,7 +356,7 @@
             // linkLabel5
             // 
             this.linkLabel5.AutoSize = true;
-            this.linkLabel5.Location = new System.Drawing.Point(108, 65);
+            this.linkLabel5.Location = new System.Drawing.Point(107, 53);
             this.linkLabel5.Name = "linkLabel5";
             this.linkLabel5.Size = new System.Drawing.Size(17, 12);
             this.linkLabel5.TabIndex = 49;
@@ -367,7 +367,7 @@
             // linkLabel6
             // 
             this.linkLabel6.AutoSize = true;
-            this.linkLabel6.Location = new System.Drawing.Point(145, 65);
+            this.linkLabel6.Location = new System.Drawing.Point(144, 53);
             this.linkLabel6.Name = "linkLabel6";
             this.linkLabel6.Size = new System.Drawing.Size(17, 12);
             this.linkLabel6.TabIndex = 50;
@@ -378,7 +378,7 @@
             // linkLabel7
             // 
             this.linkLabel7.AutoSize = true;
-            this.linkLabel7.Location = new System.Drawing.Point(165, 65);
+            this.linkLabel7.Location = new System.Drawing.Point(164, 53);
             this.linkLabel7.Name = "linkLabel7";
             this.linkLabel7.Size = new System.Drawing.Size(17, 12);
             this.linkLabel7.TabIndex = 51;
@@ -389,7 +389,7 @@
             // linkLabel8
             // 
             this.linkLabel8.AutoSize = true;
-            this.linkLabel8.Location = new System.Drawing.Point(89, 65);
+            this.linkLabel8.Location = new System.Drawing.Point(88, 53);
             this.linkLabel8.Name = "linkLabel8";
             this.linkLabel8.Size = new System.Drawing.Size(17, 12);
             this.linkLabel8.TabIndex = 52;
@@ -400,7 +400,7 @@
             // linkLabel9
             // 
             this.linkLabel9.AutoSize = true;
-            this.linkLabel9.Location = new System.Drawing.Point(127, 65);
+            this.linkLabel9.Location = new System.Drawing.Point(126, 53);
             this.linkLabel9.Name = "linkLabel9";
             this.linkLabel9.Size = new System.Drawing.Size(17, 12);
             this.linkLabel9.TabIndex = 53;
@@ -411,7 +411,7 @@
             // linkLabel10
             // 
             this.linkLabel10.AutoSize = true;
-            this.linkLabel10.Location = new System.Drawing.Point(189, 65);
+            this.linkLabel10.Location = new System.Drawing.Point(188, 53);
             this.linkLabel10.Name = "linkLabel10";
             this.linkLabel10.Size = new System.Drawing.Size(17, 12);
             this.linkLabel10.TabIndex = 54;
@@ -422,7 +422,7 @@
             // linkLabel11
             // 
             this.linkLabel11.AutoSize = true;
-            this.linkLabel11.Location = new System.Drawing.Point(210, 65);
+            this.linkLabel11.Location = new System.Drawing.Point(209, 53);
             this.linkLabel11.Name = "linkLabel11";
             this.linkLabel11.Size = new System.Drawing.Size(29, 12);
             this.linkLabel11.TabIndex = 55;
