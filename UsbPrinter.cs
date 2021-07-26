@@ -38,7 +38,7 @@ namespace xinxingxiang
                 byte[] mybyte = System.Text.Encoding.Default.GetBytes(Mystring);
                 return WriteFile(iHandle, mybyte, mybyte.Length, out i, out x);
             }
-            else { throw new Exception("端口未打开。"); }
+            else { throw new Exception("端口未打开!"); }
         }
         public bool Close()
         {
